@@ -26,7 +26,7 @@ public class Curso {
 	}
 
 	public List<Aula> getAulas() {
-		return Collections.unmodifiableList(aulas);
+		return Collections.unmodifiableList(aulas); // evitar que se use o método add da lista. Para isso, foi criado e método adiciona
 	}
 	
 	// método responsável por adicionar aula no curso
