@@ -26,13 +26,31 @@ public class Curso {
 	}
 
 	public List<Aula> getAulas() {
-		return Collections.unmodifiableList(aulas); // evitar que se use o método add da lista. Para isso, foi criado e método adiciona
+		return Collections.unmodifiableList(aulas); // evitar que se use o método add da lista. Para isso, foi criado e
+													// método adiciona
 	}
-	
+
 	// método responsável por adicionar aula no curso
 	public void adiciona(Aula aula) {
 		this.aulas.add(aula);
-		
+
+	}
+
+	public int getTempoTotal() {
+		int tempoTotal = 0;
+		for (Aula aula : aulas) {
+			tempoTotal += aula.getTempo();
+
+		}
+
+		return tempoTotal;
+
+	}
+	
+	@Override
+	public String toString() {
+		return "[Curso: " + nome + ", tempo total: " + this.getTempoTotal() + ", "
+				+ "aulas: " + this.aulas + "]";
 	}
 
 }
