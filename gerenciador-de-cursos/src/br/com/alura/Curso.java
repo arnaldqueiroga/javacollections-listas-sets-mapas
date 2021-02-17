@@ -71,6 +71,7 @@ public class Curso {
 		return this.alunos.contains(aluno);
 	}
 	
+
 	
 
 }
