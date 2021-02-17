@@ -23,7 +23,7 @@ public class TestaCurso {
 		
 		javaColecoes.adiciona(new Aula("MInha nova aula", 15));
 		
-		System.out.println(javaColecoes.getAulas());
+		System.out.println(javaColecoes);
 
 	}
 
